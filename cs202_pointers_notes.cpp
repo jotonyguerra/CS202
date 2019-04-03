@@ -261,3 +261,53 @@ int main()
 
 }
 
+//4/2/19 Linked List
+
+LINKED LIST.
+
+- Dynamic list structure
+- alternative of a dynamic array.
+- advantages: "easy" to resize.
+-disadvantages : "hard" to traverse // []arr --> [5][6][2][1][0][8][7]
+									// head[] ---> [5|]		 [6|] 		[2|] [1|] [0|] [8|] [7|\];
+											//  value|link  
+									//last node link field is NULL.
+struct node
+{
+	int value;
+	node * link;
+};
+
+
+node * head;
+
+head = new node;
+//next 2 lines are equivalent
+head -> value = 10;
+(*head).value = 10;
+//next to lines are equivalent.
+head -> link = NULL;
+(*head).link = NULL;
+
+
+front insert
+------------
+node * insert;
+insert = new node;
+insert -> value = 22; //same as line below.  	
+(*insert).value = 22;	
+//need value 22 to be new front node.
+insert->link=head; 
+head = insert. //head now points to link of 22 value; 
+insert = NUll; // insert now points to null.
+
+				//now head --> [22| ]-> [10|\].  //insert-->[Null]
+
+Traverse a linked list
+//________________________;
+node * iter;				//head[] --> [18| ]-> [7| ]-> [22| ] -> [12| ] -> [10| ];
+iter = head;					//iter[] points to head.
+cout << iter -> value << " ";
+iter = iter-> link; //Method of traversing forces pointer to point and next element of linked list.
+cout << iter -> value << " "; //will output value 7.
+iter = iter -> link; // iter -> link points to address assoicated with 7 in the link list.
