@@ -1,0 +1,55 @@
+TEST NOTES.
+
+The three basic concepts of OOP/Object Oriented Programming. LIST THREE.
+-Encapsulation: public / private.
+
+-Inheritance: 
+
+-Polymorphism:
+
+Chapter 11 (Inheritence)
+
+	- Inheritance "is-a" and Composition "has-a"
+	- public, private, and protected Inheritance. KNOW THEM AND THE TABLE; TF PROTECTED MEMBER DIFFERENCE FROM PRIVATE
+	-How to call base class functions from derived class // SHAPES NOTES ON MOODLE!!!!
+	-Function Overriding. //OVERLOAD FUNCTION IN DERIVED CLASS. 
+	-How are base class constructors invoked in derived class
+	-Trace and/or write code on inhertiance and composition. 
+
+	Operator Overloading (check the fraction class)
+
+	-write code on overloading an operator
+	-determine which operator from the class is called when called in main (or anywhere else)
+
+What are friend functions? p 898 - 903
+	-declared within class
+	-technically not a member function (not called through object)
+	-although not a member function, it can access private members of the objects.
+
+Pointers p.818 - 847
+
+	-Declare a pointer
+	-assign an address to a pointer (legal assignment of pointers)
+	-How do we dereference a pointer and what does it mean to dereference a pointer.!!!
+	-Understand what actions new and delete perform. !!!!!!!!! Define and know what they DO. 
+		NEW= ALLOCATES::::::: DELETE: DEALLOCATES
+
+	-Understand memory leak and what are the issues !!!!!!!!!
+		::KNOW DEFINITION::::::
+
+	-understand dangling pointers and what the issues.
+
+	-understand the difference between deep copy and shallow copy !!!!!
+			:: SHALLOW COPY : copies locations. TWO POINTERS POINT TO SAME MEM LOCATION
+			:: TWO VALUES = deep copy.
+
+	-Resize a 1D and 2D array.
+
+
+FORMAT
+
+True FAlkse
+
+reading writing code on inhertiacne , overloading and pointers.  
+
+BASES ON ASSIGNMENT 7 AND 8!

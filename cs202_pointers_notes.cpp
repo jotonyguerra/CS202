@@ -80,7 +80,7 @@ int main()
 
 	*cPtr = 'Z'; //will no assign 'Z' to the location assigned by line above. 
 
-	iPtr2 = new int; 
+	iPtr2 = new int x; 
 
 	dblPtr5 = new double;
 
@@ -165,7 +165,7 @@ for (int i = 0; i < 5; i ++)
 
 delete [] arr;				// deletes the 5 element array. arr is a dangling pointer now.
 arr = resize;				//arr is now pointing to a 10 element array.
-resize = null;			// resize now points to nothing.
+resize = NULL;			// resize now points to nothing.
 
 // delete [] resize will delete all the above work as both arr and resize point to the 10 element array/
 /************************************************
@@ -278,20 +278,18 @@ struct node
 	node * link;
 };
 
-
-node * head;
-
-head = new node;
+node * head; //struct type node pointer head.
+head = new node; //head = new pointer node.
 //next 2 lines are equivalent
-head -> value = 10;
+head -> value = 10; //head points to value 10;
 (*head).value = 10;
 //next to lines are equivalent.
-head -> link = NULL;
+head -> link = NULL; //link is now null;
 (*head).link = NULL;
 
-
-front insert
-------------
+//
+//front insert
+//------------
 node * insert;
 insert = new node;
 insert -> value = 22; //same as line below.  	
@@ -300,10 +298,9 @@ insert -> value = 22; //same as line below.
 insert->link=head; 
 head = insert. //head now points to link of 22 value; 
 insert = NUll; // insert now points to null.
-
 				//now head --> [22| ]-> [10|\].  //insert-->[Null]
 
-Traverse a linked list
+//Traverse a linked list
 //________________________;
 node * iter;				//head[] --> [18| ]-> [7| ]-> [22| ] -> [12| ] -> [10| ];
 iter = head;					//iter[] points to head.
@@ -311,3 +308,42 @@ cout << iter -> value << " ";
 iter = iter-> link; //Method of traversing forces pointer to point and next element of linked list.
 cout << iter -> value << " "; //will output value 7.
 iter = iter -> link; // iter -> link points to address assoicated with 7 in the link list.
+
+
+//looping
+node * i;
+i = head;
+//loop traverses and outputs value of linked list.
+while(i != NULL)
+{
+	cout << i -> value << " ";
+	i = i->link;
+	cout << endl
+}
+
+//for loop
+for(node * i = head; i != NULL; i = i -> link)
+{
+	cout << i -> value << " ";
+}
+
+// insert inbetween
+//__________________
+// want insert between 22 and 12.
+
+node * insert;
+insert = headl
+insert = insert->link->link; //pointer now points to address of value 22;
+
+node * add; //points to nothing.
+add = new node; // allocate node to pointer add.
+add-> value = 16; //node that add points to value is now 16.
+//incorrect
+//insert->link = add; // destroys node address of value 22. //baddddd
+
+//correct version.
+add->link = insert->link; // result 
+insert->link = add; // lost address of insert link but it is copied into add so now value 16 link points to 12.
+//value = 16 is added inbetween 22 and 12.
+add = insert = NULL:
+
